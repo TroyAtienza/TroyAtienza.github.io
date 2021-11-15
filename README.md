@@ -1,5 +1,5 @@
 # Grade Calculator
-## This project exists for Git practice and basic web design.
+### This project exists for Git practice and basic web design practice.
 
 Features:
 - Basic default layout.
