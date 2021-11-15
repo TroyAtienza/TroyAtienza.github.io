@@ -1,7 +1,5 @@
-# TroyAtienza.github.io
-Grade Calculator
-
-This project exists for Git practice and basic web design.
+# Grade Calculator
+## This project exists for Git practice and basic web design.
 
 Features:
 - Basic default layout.
