@@ -3,4 +3,32 @@ body {
   font-weight: bold;
   padding: 60px;
   font-size: 30px;
+  box-sizing: border-box;
+}
+
+/* Calculator Section */
+.column {
+  width:800px;
+  position: fixed;
+  left: 50%;
+  margin-left: -400px;
+}
+
+/* Set width length for the the columns */
+.assignment {
+  width: 20%;
+}
+
+.grade {
+  width: 55%;
+}
+
+.weight {
+  width: 70%;
+}
+
+.calculator:after {
+  content: "";
+  display: table; /* Sets "display behaviour" to be table-like */
+  clear: both;  /* Clears the stuff next to the calculator */
 }
