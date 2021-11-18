@@ -1,0 +1,37 @@
+body {
+  text-align: center;
+  font-weight: bold;
+  padding: 50px;
+  font-size: 30px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+table {
+  width: 900px;
+  padding-bottom: 50px;
+  border-color: brown;
+  border-style: solid;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+#title {
+  background-color: green;
+}
+
+/* Calculator Section */
+.header {
+  height: 100px;
+  border-color: brown;
+  background-color: red;
+  border-style:solid;
+}
+
+.rows {
+  height: 50px;
+  font-weight: normal;
+  text-align: left;
+  border-style:solid;
+  border-bottom: brown;
+}
