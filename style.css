@@ -22,13 +22,13 @@ table {
 
 /* Calculator Section */
 .header {
-  height: 100px;
+  height: 70px;
   border-color: brown;
   background-color: red;
   border-style:solid;
 }
 
-.rows {
+.row {
   height: 50px;
   font-weight: normal;
   text-align: left;
@@ -36,6 +36,21 @@ table {
   border-right: none;
   border-left: none;
   border-top: none;
+}
+
+.col1 {
+  line-height: 40px;
+  width: 98%;
+}
+
+.col2 {
+  line-height: 40px;
+  width: 96%;
+}
+
+.col3 {
+  line-height: 40px;
+  width: 96%;
 }
 
 /* For the calculations */
