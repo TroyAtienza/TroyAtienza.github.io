@@ -54,5 +54,6 @@ thead {
 }
 
 /* For the calculations */
-.last_row {
+.button {
+  width: 500px;
 }
