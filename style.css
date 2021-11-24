@@ -21,7 +21,7 @@ table {
 }
 
 /* Calculator Section */
-.header {
+thead {
   height: 70px;
   border-color: brown;
   background-color: red;
