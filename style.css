@@ -9,7 +9,6 @@ body {
 
 table {
   width: 900px;
-  padding-bottom: 50px;
   border-color: brown;
   border-style: solid;
   margin: 0 auto;
@@ -29,13 +28,20 @@ thead {
 }
 
 tbody {
-  height: 50px;
   font-weight: normal;
   text-align: left;
   border-style:solid;
+}
+
+tfoot {
+  height: 80px;
+  text-align: center;
+}
+
+.col1 , .col2 , .col3 {
   border-right: none;
-  border-left: none;
   border-top: none;
+  padding: 15px 0 0 8px;
 }
 
 .col1 {
@@ -51,9 +57,4 @@ tbody {
 .col3 {
   line-height: 40px;
   width: 96%;
-}
-
-/* For the calculations */
-.button {
-  width: 500px;
 }

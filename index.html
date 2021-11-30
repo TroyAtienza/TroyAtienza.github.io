@@ -16,7 +16,7 @@
 	<!-- The calculator section -->
 	<div class="calculator">
 
-		<table id="table" cellspacing="0">
+		<table id="table">
 			<thead>
 				<tr>
 					<td style="border-bottom:none; width:50%">Assignment</td>
@@ -26,7 +26,7 @@
 			</thead>
 
 			<tbody>
-				<tr class="row">
+				<tr>
 					<form>
 						<td><input type="text" class="col1" name"col1" placeholder="Assignment"></td>
 						<td><input type="text" class="col2" name"col2" placeholder="Grade"></td>
@@ -34,14 +34,22 @@
 					</form>
 				</tr>
 
-				<tr class="row">
-					<td>Data</td>
+				<tr>
+					<td><input type="text" class="col1" name"col1"></td>
+					<td><input type="text" class="col2" name"col2"></td>
+					<td><input type="text" class="col3" name"col3"></td>
+				</tr>
+
+				<tr>
+					<td><input type="text" class="col1" name"col1"></td>
+					<td><input type="text" class="col2" name"col2"></td>
+					<td><input type="text" class="col3" name"col3"></td>
 				</tr>
 			</tbody>
 
 			<tfoot>
-				<tr class="row last_row">
-					<td><button type="button" onclick="appendRow('table');">Add another line</button></td>
+				<tr>
+					<td colspan="3"><button type="button" onclick="appendRow('table');">Add another line</button></td>
 				</tr>
 			</tfoot>
 
