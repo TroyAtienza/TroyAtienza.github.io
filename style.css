@@ -58,3 +58,10 @@ tfoot {
   line-height: 40px;
   width: 96%;
 }
+
+.row-button {
+  height: 70px;
+  width: 99%;
+  border: none;
+
+}

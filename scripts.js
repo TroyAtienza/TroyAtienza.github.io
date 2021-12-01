@@ -5,7 +5,7 @@ function appendRow(tableID) {
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
 
-  cell1.innerHTML = "Test 1";
-  cell2.innerHTML = "Test 2";
-  cell3.innerHTML = "Test 3";
+  cell1.innerHTML = '<input type="text" class="col1" name"col1">';
+  cell2.innerHTML = '<input type="text" class="col2" name"col2">';
+  cell3.innerHTML = '<input type="text" class="col3" name"col3">';
 }
