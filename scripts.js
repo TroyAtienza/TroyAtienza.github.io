@@ -1,6 +1,6 @@
 function appendRow(tableID) {
-  var tableRef = document.getElementById(tableID);
-  var row = tableRef.insertRow(table.rows.length - 2);
+  var tbodyRef = document.getElementById(tableID).getElementsByTagName('tbody')[0];
+  var row = tbodyRef.insertRow();
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
