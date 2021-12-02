@@ -9,7 +9,6 @@ body {
 
 table {
   width: 900px;
-  padding-bottom: 50px;
   border-color: brown;
   border-style: solid;
   margin: 0 auto;
@@ -21,21 +20,28 @@ table {
 }
 
 /* Calculator Section */
-.header {
+thead {
   height: 70px;
   border-color: brown;
   background-color: red;
   border-style:solid;
 }
 
-.row {
-  height: 50px;
+tbody {
   font-weight: normal;
   text-align: left;
   border-style:solid;
+}
+
+tfoot {
+  height: 80px;
+  text-align: center;
+}
+
+.col1 , .col2 , .col3 {
   border-right: none;
-  border-left: none;
   border-top: none;
+  padding: 15px 0 0 8px;
 }
 
 .col1 {
@@ -53,6 +59,9 @@ table {
   width: 96%;
 }
 
-/* For the calculations */
-.last_row {
+.row-button {
+  height: 70px;
+  width: 99%;
+  border: none;
+
 }

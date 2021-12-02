@@ -16,15 +16,17 @@
 	<!-- The calculator section -->
 	<div class="calculator">
 
-		<table id="table" cellspacing="0">
-			<tbody>
-				<tr class="header">
+		<table id="table">
+			<thead>
+				<tr>
 					<td style="border-bottom:none; width:50%">Assignment</td>
 					<td style="border-bottom:none; width:25%">Grades</td>
 					<td style="border-bottom:none; width:25%">Weight</td>
 				</tr>
+			</thead>
 
-				<tr class="row">
+			<tbody>
+				<tr>
 					<form>
 						<td><input type="text" class="col1" name"col1" placeholder="Assignment"></td>
 						<td><input type="text" class="col2" name"col2" placeholder="Grade"></td>
@@ -32,15 +34,25 @@
 					</form>
 				</tr>
 
-				<tr class="row">
-					<td>Data</td>
+				<tr>
+					<td><input type="text" class="col1" name"col1"></td>
+					<td><input type="text" class="col2" name"col2"></td>
+					<td><input type="text" class="col3" name"col3"></td>
 				</tr>
 
-				<tr class="row last_row">
-					<td>Data</td>
+				<tr>
+					<td><input type="text" class="col1" name"col1"></td>
+					<td><input type="text" class="col2" name"col2"></td>
+					<td><input type="text" class="col3" name"col3"></td>
 				</tr>
-
 			</tbody>
+
+			<tfoot>
+				<tr>
+					<td colspan="3"><button class="row-button" onclick="appendRow('table');">+ Insert Row</button></td>
+				</tr>
+			</tfoot>
+
 		</table>
 
   </div>
