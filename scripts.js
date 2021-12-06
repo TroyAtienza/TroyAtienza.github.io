@@ -9,3 +9,17 @@ function appendRow(tableID) {
   cell2.innerHTML = '<input type="text" class="col2" name"col2">';
   cell3.innerHTML = '<input type="text" class="col3" name"col3">';
 }
+
+function calculateGrade() {
+  var rows = document.getElementById("table").rows;
+  var len = rows.length;
+  var result = 0;
+
+  for (var i = 1; i < len-1; i++) {
+    var cell; = rows[i].cells[2];
+    result = cell;
+  }
+
+  alert(result);
+
+}
