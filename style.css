@@ -41,7 +41,7 @@ tfoot {
 .col1 , .col2 , .col3 {
   border-right: none;
   border-top: none;
-  padding: 15px 0 0 8px;
+  height: 55px;
 }
 
 .col1 {
@@ -50,12 +50,12 @@ tfoot {
 }
 
 .col2 {
-  line-height: 40px;
+  line-height: 55px;
   width: 96%;
 }
 
 .col3 {
-  line-height: 40px;
+  line-height: 55px;
   width: 96%;
 }
 
@@ -63,5 +63,4 @@ tfoot {
   height: 70px;
   width: 99%;
   border: none;
-
 }
