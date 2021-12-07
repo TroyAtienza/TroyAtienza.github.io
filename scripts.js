@@ -16,10 +16,9 @@ function calculateGrade() {
   var result = 0;
 
   for (var i = 1; i < len-1; i++) {
-    var cell = Number(rows[i].cells[2].children[0].value);
+    var cell = Number(rows[i].cells[1].children[0].value);
     result += cell;
   }
 
   alert(result);
-
 }
