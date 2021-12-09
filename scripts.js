@@ -9,7 +9,7 @@ function appendRow(tableID) {
   var cell3 = row.insertCell(2);
 
   cell1.innerHTML = '<input type="text" class="col1" name"col1">';
-  cell2.innerHTML = '<input type="text" class="col2" name"col2">';
+  cell2.innerHTML = '<input type="text" class="col2" name"col2" oninput="weightMirror()">';
   cell3.innerHTML = '<input type="text" class="col3" name"col3">';
 }
 
@@ -18,14 +18,18 @@ function appendRow(tableID) {
  */
 function calculateGrade() {
   var rows = document.getElementById("table").rows;
-  var len = rows.length;
   var result = 0;
 
   //loops through rows and adds user input from Grades column
-  for (var i = 1; i < len-1; i++) {
-    var cell = Number(rows[i].cells[1].children[0].value);
-    result += cell;
+  for (var i = 1; i < rows.length-1; i++) {
+    result += Number(rows[i].cells[1].children[0].value);
   }
-
   alert(result);
+}
+
+function weightMirror() {
+  var rows = document.getElementById("table").rows;
+  for (var i = 1; i < rows.length-1; i++) {
+    rows[i].cells[2].children[0].value = rows[i].cells[1].children[0].value;
+  }
 }
