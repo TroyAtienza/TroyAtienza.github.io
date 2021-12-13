@@ -35,3 +35,8 @@ function weightMirror() {
     rows[i].cells[2].children[0].setAttribute("min", grade);
   }
 }
+
+function minCheck(value, min) {
+  if (Number(value) < Number(min))
+    alert("Weight cannot be lower than Grade");
+}
