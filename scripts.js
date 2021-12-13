@@ -10,7 +10,7 @@ function appendRow(tableID) {
 
   cell1.innerHTML = '<input type="text" class="col1" name"col1">';
   cell2.innerHTML = '<input type="text" class="col2" name"col2" oninput="weightMirror()">';
-  cell3.innerHTML = '<input type="text" class="col3" name"col3">';
+  cell3.innerHTML = '<input type="text" class="col3" name"col3" min="0">';
 }
 
 /*
@@ -30,6 +30,8 @@ function calculateGrade() {
 function weightMirror() {
   var rows = document.getElementById("table").rows;
   for (var i = 1; i < rows.length-1; i++) {
-    rows[i].cells[2].children[0].value = rows[i].cells[1].children[0].value;
+    var grade = rows[i].cells[1].children[0].value;
+    rows[i].cells[2].children[0].value = grade;
+    rows[i].cells[2].children[0].setAttribute("min", grade);
   }
 }
