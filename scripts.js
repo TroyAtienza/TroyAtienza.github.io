@@ -14,19 +14,23 @@ function appendRow(tableID) {
 }
 
 /*
- * Calculates the sum of the Grades column
+ * Calculates the sum of the Grades column.
  */
 function calculateGrade() {
   var rows = document.getElementById("table").rows;
   var result = 0;
 
-  //loops through rows and adds user input from Grades column
+  //loops through rows and adds user input from Grades column.
   for (var i = 1; i < rows.length-1; i++) {
     result += Number(rows[i].cells[1].children[0].value);
   }
   alert(result);
 }
 
+/*
+ * Mirrors the number inputted in the Grade column to its
+ * respective adjacent Weight column.
+ */
 function weightMirror() {
   var rows = document.getElementById("table").rows;
   for (var i = 1; i < rows.length-1; i++) {
@@ -36,6 +40,10 @@ function weightMirror() {
   }
 }
 
+/*
+ * Checks whether the value inputted in the Weight column is not lower than min.
+ * If so, alert is sent out.
+ */
 function minCheck(value, min) {
   if (Number(value) < Number(min))
     alert("Weight cannot be lower than Grade");
