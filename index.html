@@ -39,14 +39,16 @@
 					<td><input type="text" class="col1" name"col1"></td>
 					<td><input type="number" class="col2" name"col2"
 								oninput="weightMirror()"></td>
-					<td><input type="number" class="col3" name"col3" min="0"></td>
+					<td><input type="number" class="col3" name"col3" min="0"
+								onchange="minCheck(this.value, this.min)"></td>
 				</tr>
 
 				<tr>
 					<td><input type="text" class="col1" name"col1"></td>
 					<td><input type="number" class="col2" name"col2"
 								oninput="weightMirror()"></td>
-					<td><input type="number" class="col3" name"col3" min="0"></td>
+					<td><input type="number" class="col3" name"col3" min="0"
+								onchange="minCheck(this.value, this.min)"></td>
 				</tr>
 			</tbody>
 

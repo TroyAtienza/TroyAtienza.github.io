@@ -10,7 +10,8 @@ function appendRow(tableID) {
 
   cell1.innerHTML = '<input type="text" class="col1" name"col1">';
   cell2.innerHTML = '<input type="text" class="col2" name"col2" oninput="weightMirror()">';
-  cell3.innerHTML = '<input type="text" class="col3" name"col3" min="0">';
+  cell3.innerHTML = '<input type="text" class="col3" name"col3" min="0"
+    onchange="minCheck(this.value, this.min)">';
 }
 
 /*
