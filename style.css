@@ -64,3 +64,14 @@ tfoot {
   width: 99%;
   border: none;
 }
+
+#popup {
+  /*visibility: hidden;*/
+
+  font-size: 20px;
+  width: 160px;
+  background-color: #555;
+  position: absolute;
+  width: 225px;
+  margin-left: 725px;
+}
