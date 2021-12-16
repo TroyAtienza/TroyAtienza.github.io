@@ -10,8 +10,8 @@ function appendRow(tableID) {
 
   cell1.innerHTML = '<input type="text" class="col1" name"col1">';
   cell2.innerHTML = '<input type="text" class="col2" name"col2" oninput="weightMirror()">';
-  cell3.innerHTML = '<input type="text" class="col3" name"col3" min="0"
-    onchange="minCheck(this.value, this.min)">';
+  cell3.innerHTML = '<input type="text" class="col3" name"col3" min="0"\
+          onchange="minCheck(this.value, this.min)">';
 }
 
 /*
@@ -48,4 +48,9 @@ function weightMirror() {
 function minCheck(value, min) {
   if (Number(value) < Number(min))
     alert("Weight cannot be lower than Grade");
+}
+
+function minCheck(rowNumber) {
+  /* First parent node escapes input -> td, second td -> tr */
+  alert("Row number is="+rowNumber.parentNode.parentNode.rowIndex);
 }
