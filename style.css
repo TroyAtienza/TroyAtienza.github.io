@@ -66,13 +66,17 @@ tfoot {
 }
 
 #popup {
-  /*visibility: hidden;*/
-
+  visibility: hidden;
   font-size: 20px;
-  width: 160px;
+  width: 150px;
+  height: 83px;
   background-color: #555;
   position: absolute;
-  width: 225px;
-  margin-left: 725px;
-  margin-top: 130px;
+  margin-left: 770px;
+  margin-top: 60px;
+  opacity: 0.5;
+}
+
+#popup:hover {
+  opacity: 1.0;
 }
