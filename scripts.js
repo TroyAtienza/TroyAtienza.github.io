@@ -52,5 +52,7 @@ function minCheck(value, min, row) {
     var popup = document.getElementById("popup");
     popup.style.marginTop = 60+61*Number(rowNumber)+"px";
     popup.style.visibility = "visible";
+    setTimeout(function(){
+      popup.style.visibility = "hidden"; }, 5000);
   }
 }
