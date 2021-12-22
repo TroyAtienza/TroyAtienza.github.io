@@ -50,9 +50,12 @@ function minCheck(value, min, row) {
     /* First "parentNode" escapes input -> td, second td -> tr */
     var rowNumber = row.parentNode.parentNode.rowIndex - 1;
     var popup = document.getElementById("popup");
+    var triangle = document.getElementById("popup-triangle");
     popup.style.marginTop = 60+61*Number(rowNumber)+"px";
     popup.style.visibility = "visible";
+    triangle.style.visibility = "visible";
     setTimeout(function(){
-      popup.style.visibility = "hidden"; }, 5000);
+      popup.style.visibility = "hidden";
+      triangle.style.visibility = "hidden"; }, 5000);
   }
 }
