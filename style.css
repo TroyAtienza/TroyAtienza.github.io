@@ -93,7 +93,7 @@ tfoot {
   /* The position of the triangle */
   position: absolute;
   margin-left: 760px;
-  margin-top: 97.5px;
+  margin-top: 97px;
   /* The look of the triangle */
   visibility: hidden;
   opacity: 0.5;

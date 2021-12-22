@@ -53,6 +53,7 @@ function minCheck(value, min, row) {
     var triangle = document.getElementById("popup-triangle");
     popup.style.marginTop = 60+61*Number(rowNumber)+"px";
     popup.style.visibility = "visible";
+    triangle.style.marginTop = 97+61*Number(rowNumber)+"px";
     triangle.style.visibility = "visible";
     setTimeout(function(){
       popup.style.visibility = "hidden";
