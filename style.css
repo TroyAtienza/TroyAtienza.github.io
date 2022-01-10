@@ -67,14 +67,15 @@ tfoot {
 
 #popup {
   visibility: hidden;
-  font-size: 20px;
-  width: 150px;
-  height: 83px;
+  font-size: 15px;
+  width: 250px;
+  height: 33px;
   background-color: #555;
   position: absolute;
   margin-left: 770px;
-  margin-top: 60px;
+  margin-top: 75px;
   opacity: 0.5;
+  padding: 10px;
 }
 
 /* Can't hover on triangle to highlight everything. Because usage of "+" requires
