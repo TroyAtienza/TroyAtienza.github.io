@@ -64,3 +64,38 @@ tfoot {
   width: 99%;
   border: none;
 }
+
+#popup {
+  visibility: hidden;
+  font-size: 15px;
+  width: 250px;
+  height: 33px;
+  background-color: #555;
+  position: absolute;
+  margin-left: 770px;
+  margin-top: 75px;
+  opacity: 0.5;
+  padding: 10px;
+}
+
+/* Can't hover on triangle to highlight everything. Because usage of "+" requires
+ * #b to be directly after #a and not vice-versa in the case of: #a + #b */
+#popup:hover, #popup:hover + #popup-triangle {
+  opacity: 1.0;
+}
+
+#popup-triangle {
+  /* The triangle shape */
+  width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid #555;
+	border-bottom: 5px solid transparent;
+  /* The position of the triangle */
+  position: absolute;
+  margin-left: 760px;
+  margin-top: 97px;
+  /* The look of the triangle */
+  visibility: hidden;
+  opacity: 0.5;
+}
