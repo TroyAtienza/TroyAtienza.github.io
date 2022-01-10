@@ -55,8 +55,18 @@ function minCheck(value, min, row) {
     popup.style.visibility = "visible";
     triangle.style.marginTop = 97+61*Number(rowNumber)+"px";
     triangle.style.visibility = "visible";
-    setTimeout(function(){
-      popup.style.visibility = "hidden";
-      triangle.style.visibility = "hidden"; }, 5000);
+
+    var timer;
+    popup.addEventListener("mouseover", function(event) {
+      popup.style.visibility = "visible";
+      triangle.style.visibility = "visible";
+      clearTimeout(timer);
+    }, false);
+
+    popup.addEventListener("mouseout", function(event) {
+      timer = setTimeout(function(){
+        popup.style.visibility = "hidden";
+        triangle.style.visibility = "hidden"; }, 5000);
+    }, false);
   }
 }
