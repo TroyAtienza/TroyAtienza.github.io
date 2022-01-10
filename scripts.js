@@ -43,7 +43,8 @@ function weightMirror() {
 
 /*
  * Checks whether the value inputted in the Weight column is not lower than min.
- * If so, alert is sent out.
+ * If so, popup shows up. Popup disappears if user does not hover on the popup for
+ * more than 5 seconds.
  */
 function minCheck(value, min, row) {
   if (Number(value) < Number(min)) {
@@ -56,6 +57,7 @@ function minCheck(value, min, row) {
     triangle.style.marginTop = 97+61*Number(rowNumber)+"px";
     triangle.style.visibility = "visible";
 
+    /* The timer */
     var timer;
     popup.addEventListener("mouseover", function(event) {
       popup.style.visibility = "visible";
