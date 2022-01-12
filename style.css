@@ -8,10 +8,8 @@ body {
 }
 
 table {
-  width: 900px;
   border-color: brown;
   border-style: solid;
-  margin: 0 auto;
   border-collapse: collapse;
 }
 
@@ -34,7 +32,6 @@ tbody {
 }
 
 tfoot {
-  height: 80px;
   text-align: center;
 }
 
@@ -98,4 +95,18 @@ tfoot {
   /* The look of the triangle */
   visibility: hidden;
   opacity: 0.5;
+}
+
+table, .submit-box {
+  width: 900px;
+  margin: 0 auto;
+}
+
+tfoot, .submit-box {
+  height: 80px;
+}
+
+.submit-box {
+  background-color: blue;
+
 }
