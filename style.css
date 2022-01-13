@@ -7,17 +7,15 @@ body {
   margin: 0 auto;
 }
 
-table {
-  border-color: brown;
-  border-style: solid;
-  border-collapse: collapse;
-}
-
 #title {
   background-color: green;
 }
 
 /* Calculator Section */
+table {
+  width: 900px;
+}
+
 thead {
   height: 70px;
   border-color: brown;
@@ -56,12 +54,6 @@ tfoot {
   width: 96%;
 }
 
-.row-button {
-  height: 70px;
-  width: 99%;
-  border: none;
-}
-
 #popup {
   visibility: hidden;
   font-size: 15px;
@@ -98,15 +90,23 @@ tfoot {
 }
 
 table, .submit-box {
-  width: 900px;
   margin: 0 auto;
+  border-style: solid;
+  border-collapse: collapse;
 }
 
-tfoot, .submit-box {
-  height: 80px;
+table, .submit-box, .submit-button {
+  border-color: brown;
 }
 
 .submit-box {
-  background-color: blue;
+  height: 80px;
+  width: 894px;
+  border-top: none;
+}
 
+.submit-button, .row-button {
+  height: 70px;
+  width: 100px;
+  margin-top: 5px;
 }
