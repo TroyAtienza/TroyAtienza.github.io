@@ -9,7 +9,7 @@ function appendRow(tableID) {
   var cell3 = row.insertCell(2);
 
   cell1.innerHTML = '<input type="text" class="col1" name"col1">';
-  cell2.innerHTML = '<input type="number" class="col2" name"col2" oninput="weightMirror()">';
+  cell2.innerHTML = '<input type="number" class="col2" name"col2">';
   cell3.innerHTML = '<input type="number" class="col3" name"col3" min="0"\
           onchange="minCheck(this.value, this.min, this)">';
 }
@@ -29,19 +29,6 @@ function calculateGrade() {
     result += grade/100*weight;
   }
   alert(result);
-}
-
-/*
- * Mirrors the number inputted in the Grade column to its
- * respective adjacent Weight column.
- */
-function weightMirror() {
-  var rows = document.getElementById("table").rows;
-  for (var i = 1; i < rows.length-1; i++) {
-    var grade = rows[i].cells[1].children[0].value;
-    rows[i].cells[2].children[0].value = grade;
-    rows[i].cells[2].children[0].setAttribute("min", grade);
-  }
 }
 
 /*
@@ -73,5 +60,23 @@ function minCheck(value, min, row) {
         popup.style.visibility = "hidden";
         triangle.style.visibility = "hidden"; }, 5000);
     }, false);
+  }
+}
+
+
+
+/*********************************************************************/
+/*Deprecated Functions*/
+
+/*
+ * Mirrors the number inputted in the Grade column to its
+ * respective adjacent Weight column.
+ */
+function weightMirror() {
+  var rows = document.getElementById("table").rows;
+  for (var i = 1; i < rows.length-1; i++) {
+    var grade = rows[i].cells[1].children[0].value;
+    rows[i].cells[2].children[0].value = grade;
+    rows[i].cells[2].children[0].setAttribute("min", grade);
   }
 }
