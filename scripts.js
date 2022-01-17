@@ -20,10 +20,13 @@ function appendRow(tableID) {
 function calculateGrade() {
   var rows = document.getElementById("table").rows;
   var result = 0;
+  var grade, weight;
 
-  //loops through rows and adds user input from Grades column.
-  for (var i = 1; i < rows.length-1; i++) {
-    result += Number(rows[i].cells[1].children[0].value);
+  //loops through rows and calculates user input from Grades and Weight column.
+  for (var i = 1; i < 2; i++) {
+    grade = Number(rows[i].cells[1].children[0].value);
+    weight = Number(rows[i].cells[2].children[0].value);
+    result += grade/100*weight;
   }
   alert(result);
 }
