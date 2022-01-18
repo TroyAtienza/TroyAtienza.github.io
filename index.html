@@ -29,8 +29,7 @@
 				<tr>
 						<td><input type="text" class="col1" name"col1"
 									placeholder="Assignment"></td>
-						<td><input type="number" class="col2" name"col2" placeholder="0"
-									oninput="weightMirror()"></td>
+						<td><input type="number" class="col2" name"col2" placeholder="0"></td>
 						<td><input type="number" class="col3" name"col3" placeholder="0"
 									min="0" onchange="minCheck(this.value, this.min, this)"></td>
 									<div id="popup">This value must be greater than or equal
@@ -40,31 +39,34 @@
 
 				<tr>
 					<td><input type="text" class="col1" name"col1"></td>
-					<td><input type="number" class="col2" name"col2"
-								oninput="weightMirror()"></td>
+					<td><input type="number" class="col2" name"col2"></td>
 					<td><input type="number" class="col3" name"col3" min="0"
 								onchange="minCheck(this.value, this.min, this)"></td>
 				</tr>
 
 				<tr>
 					<td><input type="text" class="col1" name"col1"></td>
-					<td><input type="number" class="col2" name"col2"
-								oninput="weightMirror()"></td>
+					<td><input type="number" class="col2" name"col2"></td>
 					<td><input type="number" class="col3" name"col3" min="0"
 								onchange="minCheck(this.value, this.min, this)"></td>
 				</tr>
 			</tbody>
 
 			<tfoot>
-				<tr>
-					<td colspan="3"><button class="row-button"
-						onclick="appendRow('table');">+ Insert Row</button></td>
-				</tr>
+					<tr>
+						<td><input type="text" class="col1" name"col1"></td>
+						<td><input type="number" class="col2" name"col2"></td>
+						<td><input type="number" class="col3" name"col3" min="0"></td>
+					</tr>
 			</tfoot>
 
 		</table>
+		<div class="submit-box">
+			<button class="row-button"
+					onclick="appendRow('table');">+ Insert Row</button>
+			<button class="submit-button" onclick="calculateGrade();">Submit</button>
 
-		<button class="row-button" onclick="calculateGrade();">+ Insert Row</button>
+		</div>
 
   </div>
 

@@ -9,8 +9,8 @@ function appendRow(tableID) {
   var cell3 = row.insertCell(2);
 
   cell1.innerHTML = '<input type="text" class="col1" name"col1">';
-  cell2.innerHTML = '<input type="text" class="col2" name"col2" oninput="weightMirror()">';
-  cell3.innerHTML = '<input type="text" class="col3" name"col3" min="0"\
+  cell2.innerHTML = '<input type="number" class="col2" name"col2">';
+  cell3.innerHTML = '<input type="number" class="col3" name"col3" min="0"\
           onchange="minCheck(this.value, this.min, this)">';
 }
 
@@ -20,25 +20,15 @@ function appendRow(tableID) {
 function calculateGrade() {
   var rows = document.getElementById("table").rows;
   var result = 0;
+  var grade, weight;
 
-  //loops through rows and adds user input from Grades column.
-  for (var i = 1; i < rows.length-1; i++) {
-    result += Number(rows[i].cells[1].children[0].value);
+  //loops through rows and calculates user input from Grades and Weight column.
+  for (var i = 1; i < 2; i++) {
+    grade = Number(rows[i].cells[1].children[0].value);
+    weight = Number(rows[i].cells[2].children[0].value);
+    result += grade/100*weight;
   }
   alert(result);
-}
-
-/*
- * Mirrors the number inputted in the Grade column to its
- * respective adjacent Weight column.
- */
-function weightMirror() {
-  var rows = document.getElementById("table").rows;
-  for (var i = 1; i < rows.length-1; i++) {
-    var grade = rows[i].cells[1].children[0].value;
-    rows[i].cells[2].children[0].value = grade;
-    rows[i].cells[2].children[0].setAttribute("min", grade);
-  }
 }
 
 /*
@@ -70,5 +60,23 @@ function minCheck(value, min, row) {
         popup.style.visibility = "hidden";
         triangle.style.visibility = "hidden"; }, 5000);
     }, false);
+  }
+}
+
+
+
+/*********************************************************************/
+/*Deprecated Functions*/
+
+/*
+ * Mirrors the number inputted in the Grade column to its
+ * respective adjacent Weight column.
+ */
+function weightMirror() {
+  var rows = document.getElementById("table").rows;
+  for (var i = 1; i < rows.length-1; i++) {
+    var grade = rows[i].cells[1].children[0].value;
+    rows[i].cells[2].children[0].value = grade;
+    rows[i].cells[2].children[0].setAttribute("min", grade);
   }
 }
