@@ -15,7 +15,8 @@ function appendRow(tableID) {
 }
 
 /*
- * Calculates the sum of the Grades column.
+ * Calculates the overall grade of the user by multiplying the decimal form of
+ * the Grade of the User with the Weight of the respective assessment.
  */
 function calculateGrade() {
   var rows = document.getElementById("table").rows;
