@@ -7,20 +7,17 @@ body {
   margin: 0 auto;
 }
 
-#title {
-  background-color: green;
-}
-
 /* Calculator Section */
 table {
   width: 900px;
+  border-top: none !important;
 }
 
 thead {
   height: 70px;
   border-color: brown;
-  background-color: red;
   border-style:solid;
+
 }
 
 tbody {
@@ -93,20 +90,47 @@ table, .submit-box {
   margin: 0 auto;
   border-style: solid;
   border-collapse: collapse;
+  border-width: 50px 45px;
 }
 
-table, .submit-box, .submit-button {
-  border-color: brown;
+#title {
+  height: 35px;
+  width: 850px;
+  margin-left: 50px;
+  text-align: left;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-top: 15px;
+  border-radius: 30px 30px 0px 0px;
+}
+
+table, .submit-box, button {
+  border-color: #f5ecef;
+}
+
+#title, .submit-box, thead {
+  background-color: #f5ecef;
+}
+
+tr, td input {
+  background-color: #8a7981;
+  caret-color: white;
+}
+
+td input {
+  color: white;
 }
 
 .submit-box {
   height: 80px;
-  width: 894px;
+  width: 810px;
   border-top: none;
+  border-radius: 0px 0px 30px 30px;
 }
 
-.submit-button, .row-button {
+.button {
   height: 70px;
   width: 100px;
   margin-top: 5px;
+  background-color: #8a7981;
 }
