@@ -9,9 +9,11 @@
 </head>
 
 <body>
-  <div id="title">
-    Grade Calculator
-  </div>
+	<div class="screen-container">
+	  <div id="title">ITRA</div>
+
+		<div id="screen">Screen</div>
+	</div>
 
 	<!-- The calculator section -->
 	<div class="calculator">
@@ -29,9 +31,9 @@
 				<tr>
 						<td><input type="text" class="col1" name"col1"
 									placeholder="Assignment"></td>
-						<td><input type="number" class="col2" name"col2" placeholder="0"></td>
+						<td><input type="number" class="col2" name"col2" placeholder="0" min="0" max="100"></td>
 						<td><input type="number" class="col3" name"col3" placeholder="0"
-									min="0" onchange="minCheck(this.value, this.min, this)"></td>
+									min="0" max="100" onchange="minCheck(this.value, this.min, this)"></td>
 									<div id="popup">This value must be greater than or equal
 										to this assignment's grade.</div>
 									<div id = "popup-triangle"></div>
@@ -39,32 +41,24 @@
 
 				<tr>
 					<td><input type="text" class="col1" name"col1"></td>
-					<td><input type="number" class="col2" name"col2"></td>
-					<td><input type="number" class="col3" name"col3" min="0"
+					<td><input type="number" class="col2" name"col2" min="0" max="100"></td>
+					<td><input type="number" class="col3" name"col3" min="0" max="100"
 								onchange="minCheck(this.value, this.min, this)"></td>
 				</tr>
 
 				<tr>
 					<td><input type="text" class="col1" name"col1"></td>
-					<td><input type="number" class="col2" name"col2"></td>
-					<td><input type="number" class="col3" name"col3" min="0"
+					<td><input type="number" class="col2" name"col2" min="0" max="100"></td>
+					<td><input type="number" class="col3" name"col3" min="0" max="100"
 								onchange="minCheck(this.value, this.min, this)"></td>
 				</tr>
 			</tbody>
 
-			<tfoot>
-					<tr>
-						<td><input type="text" class="col1" name"col1"></td>
-						<td><input type="number" class="col2" name"col2"></td>
-						<td><input type="number" class="col3" name"col3" min="0"></td>
-					</tr>
-			</tfoot>
-
 		</table>
-		<div class="submit-box">
-			<button class="row-button"
+		<div class="buttons-container">
+			<button class="button"
 					onclick="appendRow('table');">+ Insert Row</button>
-			<button class="submit-button" onclick="calculateGrade();">Submit</button>
+			<button class="button" onclick="calculateGrade();">Submit</button>
 
 		</div>
 

@@ -9,9 +9,9 @@ function appendRow(tableID) {
   var cell3 = row.insertCell(2);
 
   cell1.innerHTML = '<input type="text" class="col1" name"col1">';
-  cell2.innerHTML = '<input type="number" class="col2" name"col2">';
-  cell3.innerHTML = '<input type="number" class="col3" name"col3" min="0"\
-          onchange="minCheck(this.value, this.min, this)">';
+  cell2.innerHTML = '<input type="number" class="col2" name"col2" min="0" max="100">';
+  cell3.innerHTML = '<input type="number" class="col3" name"col3" min="0" \
+          max="100" onchange="minCheck(this.value, this.min, this)">';
 }
 
 /*
