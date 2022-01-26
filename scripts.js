@@ -29,7 +29,11 @@ function calculateGrade() {
     weight = Number(rows[i].cells[2].children[0].value);
     result += grade/100*weight;
   }
-  alert(result);
+  var screen = document.getElementById("screen");
+  screen.innerHTML = result;
+  screen.style.textAlign = "right";
+  screen.style.paddingRight = "50px";
+  screen.style.width = "calc(100% - 150px)";
 }
 
 /*
