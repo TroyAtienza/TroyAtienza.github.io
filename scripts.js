@@ -24,7 +24,7 @@ function calculateGrade() {
   var grade, weight;
 
   //loops through rows and calculates user input from Grades and Weight column.
-  for (var i = 1; i < 2; i++) {
+  for (var i = 1; i < rows.length-1; i++) {
     grade = Number(rows[i].cells[1].children[0].value);
     weight = Number(rows[i].cells[2].children[0].value);
     result += grade/100*weight;
@@ -32,8 +32,8 @@ function calculateGrade() {
   var screen = document.getElementById("screen");
   screen.innerHTML = result;
   screen.style.textAlign = "right";
-  screen.style.paddingRight = "50px";
-  screen.style.width = "calc(100% - 150px)";
+  screen.style.paddingRight = "20px";
+  screen.style.width = "calc(100% - 120px)";
 }
 
 /*
