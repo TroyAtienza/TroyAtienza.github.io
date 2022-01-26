@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Technology";
+  src: url('technology/Technology.ttf');
+}
+
 body {
   text-align: center;
   font-weight: bold;
@@ -109,6 +114,8 @@ table, .buttons-container {
   margin-left: 50px;
   font-size: 70px;
   padding-top: 4px;
+  font-family: "Technology";
+  font-weight: normal;
 }
 
 table, .buttons-container {
