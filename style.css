@@ -36,17 +36,20 @@ tbody {
 
 .col1 {
   line-height: 40px;
-  width: 94%;
+  width: 230px;
+  margin-left: 5px;
 }
 
 .col2 {
   line-height: 55px;
-  width: 88.5%;
+  width: 100px;
+  margin-left:10px;
 }
 
 .col3 {
   line-height: 55px;
-  width: 89%;
+  width: 100px;
+  margin-right:5px;
 }
 
 #popup {
@@ -120,14 +123,11 @@ table, .buttons-container {
 
 td input, #screen {
   background-color: #8a7981;
+  border-radius: 25px;
 }
 
 .screen-container, .buttons-container {
   background-color: #f5ecef;
-}
-
-td input, #screen {
-  border-radius: 25px;
 }
 
 thead tr, tbody tr {
