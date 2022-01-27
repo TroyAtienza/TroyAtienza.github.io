@@ -30,10 +30,6 @@ tbody {
   text-align: left;
 }
 
-tfoot {
-  text-align: center;
-}
-
 .col1 , .col2 , .col3 {
   height: 55px;
 }
