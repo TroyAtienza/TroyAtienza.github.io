@@ -21,16 +21,17 @@ function appendRow(tableID) {
 function calculateGrade() {
   var rows = document.getElementById("table").rows;
   var result = 0;
-  var grade, weight;
+  var grade, weight, total;
 
   //loops through rows and calculates user input from Grades and Weight column.
   for (var i = 1; i < rows.length-1; i++) {
     grade = Number(rows[i].cells[1].children[0].value);
     weight = Number(rows[i].cells[2].children[0].value);
+    total += weight;
     result += grade/100*weight;
   }
   var screen = document.getElementById("screen");
-  screen.innerHTML = result;
+  screen.innerHTML = parseFloat(result).toFixed(2);
   screen.style.textAlign = "right";
   screen.style.paddingRight = "20px";
   screen.style.width = "calc(100% - 120px)";

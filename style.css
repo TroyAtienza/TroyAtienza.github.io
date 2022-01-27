@@ -109,11 +109,11 @@ table, .buttons-container {
 }
 
 #screen {
-  height: 86px;
+  height: 80px;
   width: calc(100% - 100px);
   margin-left: 50px;
   font-size: 70px;
-  padding-top: 4px;
+  padding-top: 10px;
   font-family: "Technology";
   font-weight: normal;
 }
