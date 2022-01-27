@@ -178,3 +178,7 @@ td input {
   border-color: #444444;
   border-width: 2px;
 }
+
+::placeholder {
+  color: white;
+}
