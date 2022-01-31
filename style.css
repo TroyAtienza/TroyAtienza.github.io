@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Technology";
+  src: url('technology/Technology.ttf');
+}
+
 body {
   text-align: center;
   font-weight: bold;
@@ -16,15 +21,13 @@ table {
 thead {
   height: 10px;
   font-size: 15px;
+  font-weight: normal;
+  color: #d09c50;
 }
 
 tbody {
   font-weight: normal;
   text-align: left;
-}
-
-tfoot {
-  text-align: center;
 }
 
 .col1 , .col2 , .col3 {
@@ -33,17 +36,20 @@ tfoot {
 
 .col1 {
   line-height: 40px;
-  width: 94%;
+  width: 230px;
+  margin-left: 5px;
 }
 
 .col2 {
   line-height: 55px;
-  width: 88.5%;
+  width: 100px;
+  margin-left:10px;
 }
 
 .col3 {
   line-height: 55px;
-  width: 89%;
+  width: 100px;
+  margin-right:5px;
 }
 
 #popup {
@@ -89,7 +95,7 @@ table, .buttons-container {
 }
 
 .screen-container {
-  height: 135px;
+  height: 150px;
   width: 600px;
   border-radius: 30px 30px 0px 0px;
 }
@@ -97,16 +103,18 @@ table, .buttons-container {
 #title {
   text-align: left;
   font-size: 20px;
-  padding-left: 50px;
-  padding-top: 15px;
+  color: #d09c50;
+  padding: 15px 0px 10px 50px;
 }
 
 #screen {
-  height: 86px;
+  height: 80px;
   width: calc(100% - 100px);
   margin-left: 50px;
   font-size: 70px;
-  padding-top: 4px;
+  padding-top: 10px;
+  font-family: "Technology";
+  font-weight: normal;
 }
 
 table, .buttons-container {
@@ -115,14 +123,11 @@ table, .buttons-container {
 
 td input, #screen {
   background-color: #8a7981;
+  border-radius: 25px;
 }
 
 .screen-container, .buttons-container {
   background-color: #f5ecef;
-}
-
-td input, #screen {
-  border-radius: 25px;
 }
 
 thead tr, tbody tr {
@@ -168,4 +173,12 @@ td input {
   border-top: none;
   border-color: #444444;
   border-width: 2px;
+}
+
+::placeholder {
+  color: white;
+}
+
+#title, #screen, table, button {
+  caret-color: transparent;
 }
