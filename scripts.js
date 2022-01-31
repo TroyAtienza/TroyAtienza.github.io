@@ -69,6 +69,9 @@ function minCheck(value, min, row) {
   }
 }
 
+function deleteRow(tableID) {
+
+}
 
 
 /*********************************************************************/
