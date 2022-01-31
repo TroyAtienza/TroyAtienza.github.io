@@ -178,3 +178,7 @@ td input {
 ::placeholder {
   color: white;
 }
+
+#title, #screen, table, button {
+  caret-color: transparent;
+}
