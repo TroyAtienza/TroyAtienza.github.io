@@ -56,11 +56,38 @@
 		</table>
 
 		<div class="buttons-container">
-			<button class="button"
+			<div class="numbers-container">
+				<button class="button number" id="nine"
+					onclick="clickOne();">9</button>
+				<button class="button number" id="eight"
+					onclick="clickTwo(); ">8</button>
+				<button class="button number" id="seven"
+					onclick="clickThree();">7</button>
+				<button class="button number" id="six"
+					onclick="clickFour();">6</button>
+				<button class="button number" id="five"
+					onclick="clickFive();">5</button>
+				<button class="button number" id="four"
+					onclick="clickSix();">4</button>
+				<button class="button number" id="three"
+					onclick="clickSeven();">3</button>
+				<button class="button number" id="two"
+					onclick="clickEight();">2</button>
+				<button class="button number" id="one"
+					onclick="clickNine();">1</button>
+				<button class="button number" id="zero"
+					onclick="clickZero();">0</button>
+				<button class="button number" id="dot"
+					onclick="clickDot();">.</button>
+			</div>
+
+			<div class="functions-container">
+				<button class="button"
 					onclick="addRow('table');">+ Insert Row</button>
-			<button class="button"
+				<button class="button"
 					onclick="deleteRow('table');">- Insert Row</button>
-			<button class="button" onclick="calculateGrade();">Submit</button>
+				<button class="button" onclick="calculateGrade();">Submit</button>
+			</div>
 		</div>
 
   </div>

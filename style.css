@@ -15,7 +15,7 @@ body {
 /* Calculator Section */
 table {
   width: 600px;
-  border-top: none !important;
+  border-width: 0px 45px 20px 45px;
 }
 
 thead {
@@ -91,7 +91,7 @@ table, .buttons-container {
   margin: 0 auto;
   border-style: solid;
   border-collapse: collapse;
-  border-width: 50px 45px;
+
 }
 
 .screen-container {
@@ -145,9 +145,9 @@ td input {
 }
 
 .buttons-container {
-  height: 80px;
+  height: 300px;
   width: 510px;
-  border-top: none;
+  border-width: 0px 45px 50px 45px;
   border-radius: 0px 0px 30px 30px;
 }
 
@@ -181,4 +181,31 @@ td input {
 
 #title, #screen, table, button {
   caret-color: transparent;
+}
+
+.numbers-container, .functions-container {
+  float: left;
+  width: 50%;
+}
+
+.numbers-container {
+
+}
+
+
+.functions-container {
+
+}
+
+.number {
+  width: 76px;
+}
+
+#zero {
+  width: 160px;
+}
+
+#dot {
+  font-weight:bolder;
+  padding-bottom: 4px;
 }
