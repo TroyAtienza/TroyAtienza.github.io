@@ -1,7 +1,8 @@
 /*
- * Appends another row.
+ * Adds another row at the bottom of the tbody.
+ * The specific html to be inputted is seen below.
  */
-function appendRow(tableID) {
+function addRow(tableID) {
   var tbodyRef = document.getElementById(tableID).getElementsByTagName('tbody')[0];
   var row = tbodyRef.insertRow();
   var cell1 = row.insertCell(0);
@@ -69,6 +70,13 @@ function minCheck(value, min, row) {
   }
 }
 
+  /*
+   * Deletes a row and is limited to only the tbody rows. Disabling deletion of
+   * header and footer
+   */
+function deleteRow(tableID) {
+  document.getElementById(tableID).getElementsByTagName('tbody')[0].deleteRow(0);
+}
 
 
 /*********************************************************************/
