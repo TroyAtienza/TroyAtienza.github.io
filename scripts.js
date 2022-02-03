@@ -78,8 +78,8 @@ function deleteRow(tableID) {
   document.getElementById(tableID).getElementsByTagName('tbody')[0].deleteRow(0);
 }
 
-function clickOne(value) {
-  document.activeElement.value = "9";
+function appendNumber(value) {
+  document.activeElement.value = value;
 }
 
 /*********************************************************************/
