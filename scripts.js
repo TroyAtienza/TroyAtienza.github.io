@@ -79,10 +79,7 @@ function deleteRow(tableID) {
 }
 
 function clickOne(value) {
-  document.getElementById("nine").addEventListener("mousedown", function(event) {
-    event.preventDefault();
-  });
-  alert(document.activeElement);
+  document.activeElement.value = "9";
 }
 
 /*********************************************************************/
