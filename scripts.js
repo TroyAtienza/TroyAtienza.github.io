@@ -78,6 +78,12 @@ function deleteRow(tableID) {
   document.getElementById(tableID).getElementsByTagName('tbody')[0].deleteRow(0);
 }
 
+function clickOne(value) {
+  document.getElementById("nine").addEventListener("mousedown", function(event) {
+    event.preventDefault();
+  });
+  alert(document.activeElement);
+}
 
 /*********************************************************************/
 /*Deprecated Functions*/
