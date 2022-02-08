@@ -79,18 +79,28 @@ function deleteRow(tableID) {
 }
 
 function appendNumber(value) {
-  alert(value);
-  if (document.activeElement.value.length == 0 && value == 0) {
+  if (document.activeElement.value.length == 0 && (value == 0 || value == ".")) {
     return;
   }
 
+  var current = document.activeElement.value;
   if (value == ".") {
-    
+    document.activeElement.value += ".0";
   }
 
-  var current = document.activeElement.value;
-  if (parseInt(current += parseInt(value)) < 100) {
-    document.activeElement.value += parseInt(value);
+  else {
+    if (parseInt(current += parseInt(value)) < 100) {
+      temp = current.toString();
+      alert(current % 10);
+      if (temp[-1] == "0" && temp[-2] == ".") { //checks whether the end is ".0"
+        alert("hi");
+        temp[-1] = value;
+        document.activeElement.value = Number(temp);
+      }
+      else {
+        document.activeElement.value += parseInt(value);
+      }
+    }
   }
 }
 
