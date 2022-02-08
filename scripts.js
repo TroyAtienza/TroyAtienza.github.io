@@ -79,7 +79,10 @@ function deleteRow(tableID) {
 }
 
 function appendNumber(value) {
-  document.activeElement.value = value;
+  var current = document.activeElement.value;
+  if (parseInt(current += parseInt(value)) < 100) {
+    document.activeElement.value += parseInt(value);
+  }
 }
 
 /*********************************************************************/
