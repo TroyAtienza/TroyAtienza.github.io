@@ -79,6 +79,7 @@ function deleteRow(tableID) {
 }
 
 function appendNumber(value) {
+  //first number cannot be a zero or a decimal point
   if (document.activeElement.value.length == 0 && (value == 0 || value == ".")) {
     return;
   }
@@ -91,11 +92,9 @@ function appendNumber(value) {
   else {
     if (parseInt(current += parseInt(value)) < 100) {
       temp = current.toString();
-      alert(current % 10);
-      if (temp[-1] == "0" && temp[-2] == ".") { //checks whether the end is ".0"
-        alert("hi");
-        temp[-1] = value;
-        document.activeElement.value = Number(temp);
+      if (parseInt((current % 1) * 10) == "0" && temp.charAt(temp.length-3) == ".") { //checks whether the end is ".0"
+        alert(document.activeElement.value[-1]);
+        document.activeElement.value = Number(document.activeElement.value.toString().slice(0,-1) + parseInt(value));
       }
       else {
         document.activeElement.value += parseInt(value);
