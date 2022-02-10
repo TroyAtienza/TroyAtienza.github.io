@@ -78,23 +78,31 @@ function deleteRow(tableID) {
   document.getElementById(tableID).getElementsByTagName('tbody')[0].deleteRow(0);
 }
 
+/**
+ * Appends value to the currently active element that the user has selected.
+ * The placeholder after the input of a decimal place (0), exists because otherwise,
+ * the decimal point gets removed as the number is not considered a decimal.
+ * This placeholder is removed after a number is inputted.
+ * @param value the value to be appended to the value of the active element.
+ */
 function appendNumber(value) {
   //first number cannot be a zero or a decimal point
   if (document.activeElement.value.length == 0 && (value == 0 || value == ".")) {
     return;
   }
 
+  //decimal point gets placed along with a placeholder of 0 to ensure that the decimal point is sustained
   var current = document.activeElement.value;
   if (value == ".") {
     document.activeElement.value += ".0";
   }
 
   else {
-    if (parseInt(current += parseInt(value)) < 100) {
+    if (parseInt(current += parseInt(value)) < 100) { //ensures that number does not go above 100
       temp = current.toString();
       if (parseInt((current % 1) * 10) == "0" && temp.charAt(temp.length-3) == ".") { //checks whether the end is ".0"
-        alert(document.activeElement.value[-1]);
-        document.activeElement.value = Number(document.activeElement.value.toString().slice(0,-1) + parseInt(value));
+        document.activeElement.value = Number(document.activeElement.value.
+          toString().slice(0,-1) + parseInt(value));
       }
       else {
         document.activeElement.value += parseInt(value);
