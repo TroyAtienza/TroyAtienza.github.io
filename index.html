@@ -82,11 +82,20 @@
 			</div>
 
 			<div class="functions-container">
-				<button class="button"
-					onclick="addRow('table');">+ Insert Row</button>
-				<button class="button"
-					onclick="deleteRow('table');">- Insert Row</button>
-				<button class="button" onclick="calculateGrade();">Submit</button>
+				<div class="functions-left">
+					<button class="button text" onmousedown="event.preventDefault();"
+						onclick="backspace();">DEL</button>
+					<button class="button text"
+						onclick="addRow('table');">+</button>
+					<button class="button text" id="minus"
+						onclick="deleteRow('table');">-</button>
+				</div>
+				<div class="functions-right">
+					<button class="button text" onmousedown="event.preventDefault();"
+						onclick="clearAll();">AC</button>
+					<button class="button text" id="submit" onclick="calculateGrade();">=</button>
+				</div>
+
 			</div>
 		</div>
 

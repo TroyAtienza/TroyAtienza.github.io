@@ -188,17 +188,26 @@ td input {
   width: 50%;
 }
 
-.numbers-container {
-
+.functions-left, .functions-right {
+  float: left;
 }
 
+.functions-left {
+  width: 48%;
+}
 
-.functions-container {
-
+.functions-right {
+  width: 52%;
 }
 
 .number {
   width: 76px;
+}
+
+.text {
+  height: 95px;
+  width: 115px;
+  margin-left: 10px;
 }
 
 #zero {
@@ -208,4 +217,8 @@ td input {
 #dot {
   font-weight:bolder;
   padding-bottom: 4px;
+}
+
+#submit {
+  height: 190px;
 }

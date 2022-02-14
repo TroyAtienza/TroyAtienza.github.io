@@ -86,8 +86,9 @@ function deleteRow(tableID) {
  * @param value the value to be appended to the value of the active element.
  */
 function appendNumber(value) {
-  //first number cannot be a zero or a decimal point
-  if (document.activeElement.value.length == 0 && (value == 0 || value == ".")) {
+  //cannot lead with a zero or a decimal point if input is empty
+  if ((document.activeElement.value.length == 0 && (value == 0 || value == "."))
+  || document.activeElement.type == "text") {
     return;
   }
 
@@ -109,6 +110,34 @@ function appendNumber(value) {
       }
     }
   }
+}
+
+/**
+ * Removes the last digit of a number.
+ */
+function backspace() {
+  if (document.activeElement.value.length == 0 || document.activeElement.type == "text"){
+    return;
+  }
+  var result = document.activeElement.value.toString().slice(0,-1); //gets value without the last digit
+  document.activeElement.value = result;
+}
+
+/**
+ * Clears all input forms. Text input set to "" and number input set to NaN.
+ */
+function clearAll() {
+  var inputs = document.getElementsByTagName("input");
+
+  for (let i = 0; i < inputs.length; i++) {
+    if (inputs[i].type == "text") {
+      inputs[i].value = "";
+    }
+    else if (inputs[i].type == "number") {
+      inputs[i].value = NaN;
+    }
+  }
+
 }
 
 /*********************************************************************/
