@@ -86,7 +86,7 @@ function deleteRow(tableID) {
  * @param value the value to be appended to the value of the active element.
  */
 function appendNumber(value) {
-  //first number cannot be a zero or a decimal point
+  //cannot lead with a zero or a decimal point if input is empty
   if (document.activeElement.value.length == 0 && (value == 0 || value == ".")) {
     return;
   }
@@ -109,6 +109,20 @@ function appendNumber(value) {
       }
     }
   }
+}
+
+
+function backspace() {
+  if (document.activeElement.value.length == 0){
+    return;
+  }
+  var result = document.activeElement.value.toString().slice(0,-1);
+  document.activeElement.value = result;
+}
+
+
+function clearAll() {
+
 }
 
 /*********************************************************************/

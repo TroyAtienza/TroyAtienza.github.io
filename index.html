@@ -82,9 +82,9 @@
 			</div>
 
 			<div class="functions-container">
-				<button class="button"
-					onclick="clear();">DEL</button>
-				<button class="button"
+				<button class="button" onmousedown="event.preventDefault();"
+					onclick="backspace();">DEL</button>
+				<button class="button" onmousedown="event.preventDefault();"
 					onclick="clearAll();">AC</button>
 				<button class="button"
 					onclick="addRow('table');">+</button>
