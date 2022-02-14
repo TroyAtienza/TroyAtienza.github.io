@@ -122,6 +122,16 @@ function backspace() {
 
 
 function clearAll() {
+  var inputs = document.getElementsByTagName("input");
+
+  for (let i = 0; i < inputs.length; i++) {
+    if (inputs[i].type == "text") {
+      inputs[i].value = "";
+    }
+    else if (inputs[i].type == "number") {
+      inputs[i].value = NaN;
+    }
+  }
 
 }
 
