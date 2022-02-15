@@ -1,3 +1,19 @@
+
+function addKeyListeners() {
+  var inputs = document.getElementsbyTagName("input");
+  alert("hi");
+  for (var i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener("keydown", (e) => {
+      alert("hi");
+      if (this.value > 100) {
+        e.preventDefault;
+      }
+    });
+  }
+}
+
+
+
 /*
  * Adds another row at the bottom of the tbody.
  * The specific html to be inputted is seen below.
