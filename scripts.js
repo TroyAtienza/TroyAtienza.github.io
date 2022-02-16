@@ -1,12 +1,13 @@
 
 function addKeyListeners() {
-  var inputs = document.getElementsbyTagName("input");
-  alert("hi");
+  var inputs = document.getElementsByTagName("input");
+
   for (var i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener("keydown", (e) => {
-      alert("hi");
-      if (this.value > 100) {
-        e.preventDefault;
+    inputs[i].addEventListener("keyup", (e) => {
+      alert(document.activeElement.value);
+      if (document.activeElement.value > 100) {
+        document.activeElement.value =
+        parseFloat(document.activeElement.value.toString().slice(0,-1));
       }
     });
   }
