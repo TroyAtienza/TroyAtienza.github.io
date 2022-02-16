@@ -3,8 +3,13 @@ function addKeyListeners() {
   var inputs = document.getElementsByTagName("input");
 
   for (var i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener("keydown", (e) => {
+      if (e.keyCode == 189) {
+        e.preventDefault();
+      }
+    });
+
     inputs[i].addEventListener("keyup", (e) => {
-      alert(document.activeElement.value);
       if (document.activeElement.value > 100) {
         document.activeElement.value =
         parseFloat(document.activeElement.value.toString().slice(0,-1));
