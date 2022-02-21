@@ -10,7 +10,7 @@ function addKeyListeners() {
     });
 
     inputs[i].addEventListener("keyup", (e) => {
-      if (document.activeElement.value > 100) {
+      while (document.activeElement.value > 100) {
         document.activeElement.value =
         parseFloat(document.activeElement.value.toString().slice(0,-1));
       }
