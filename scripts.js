@@ -1,3 +1,26 @@
+
+function addKeyListeners() {
+  var inputs = document.getElementsByTagName("input");
+
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].type == "text") { continue; }
+    inputs[i].addEventListener("keydown", (e) => {
+      if (e.keyCode == 189) {
+        e.preventDefault();
+      }
+    });
+
+    inputs[i].addEventListener("keyup", (e) => {
+      while (document.activeElement.value > 100) {
+        document.activeElement.value =
+        parseFloat(document.activeElement.value.toString().slice(0,-1));
+      }
+    });
+  }
+}
+
+
+
 /*
  * Adds another row at the bottom of the tbody.
  * The specific html to be inputted is seen below.

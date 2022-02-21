@@ -8,7 +8,7 @@
 	<script src="scripts.js"></script>
 </head>
 
-<body>
+<body onload="addKeyListeners();">
 	<div class="screen-container">
 	  <div id="title">ITRA</div>
 		<div id="screen">Screen</div>
@@ -86,7 +86,7 @@
 					<button class="button text" onmousedown="event.preventDefault();"
 						onclick="backspace();">DEL</button>
 					<button class="button text"
-						onclick="addRow('table');">+</button>
+						onclick="addRow('table'); addKeyListeners()">+</button>
 					<button class="button text" id="minus"
 						onclick="deleteRow('table');">-</button>
 				</div>
