@@ -3,6 +3,7 @@ function addKeyListeners() {
   var inputs = document.getElementsByTagName("input");
 
   for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].type == "text") { continue; }
     inputs[i].addEventListener("keydown", (e) => {
       if (e.keyCode == 189) {
         e.preventDefault();
