@@ -7,19 +7,21 @@ function addKeyListeners() {
     inputs[i].addEventListener("keydown", (e) => {
       if (e.keyCode == 189) {
         e.preventDefault();
+        showPopup("Cannot input negative numbers", document.activeElement);
       }
     });
 
     inputs[i].addEventListener("keyup", (e) => {
-      while (document.activeElement.value > 100) {
-        document.activeElement.value =
-        parseFloat(document.activeElement.value.toString().slice(0,-1));
+      if (document.activeElement.value > 100) {
+        showPopup("Cannot surpass 100", document.activeElement);
+        while (document.activeElement.value > 100) {
+          document.activeElement.value =
+          parseFloat(document.activeElement.value.toString().slice(0,-1));
+        }
       }
     });
   }
 }
-
-
 
 /*
  * Adds another row at the bottom of the tbody.
@@ -35,7 +37,7 @@ function addRow(tableID) {
   cell1.innerHTML = '<input type="text" class="col1" name"col1">';
   cell2.innerHTML = '<input type="number" class="col2" name"col2" min="0" max="100">';
   cell3.innerHTML = '<input type="number" class="col3" name"col3" min="0" \
-          max="100" onchange="minCheck(this.value, this.min, this)">';
+          max="100">';
 }
 
 /*
@@ -66,31 +68,35 @@ function calculateGrade() {
  * If so, popup shows up. Popup disappears if user does not hover on the popup for
  * more than 5 seconds.
  */
-function minCheck(value, min, row) {
-  if (Number(value) < Number(min)) {
-    /* First "parentNode" escapes input -> td, second td -> tr */
-    var rowNumber = row.parentNode.parentNode.rowIndex - 1;
-    var popup = document.getElementById("popup");
-    var triangle = document.getElementById("popup-triangle");
-    popup.style.marginTop = 75+61*Number(rowNumber)+"px";
+function showPopup(message, row) {
+  /* First "parentNode" escapes input -> td, second: td -> tr */
+  var rowNumber = row.parentNode.parentNode.rowIndex-1;
+  var colNumber = row.parentNode.cellIndex-1;
+  var popup = document.getElementById("popup");
+  var triangle = document.getElementById("popup-triangle");
+
+  popup.innerHTML = message;
+  popup.style.width = message.length*9 + "px";
+  popup.style.marginTop = 75+55*Number(rowNumber)+"px";
+  popup.style.marginLeft = 270+125*Number(colNumber)+"px";
+  popup.style.visibility = "visible";
+  triangle.style.marginTop = 65+55*Number(rowNumber)+"px";
+  triangle.style.marginLeft = 325+125*Number(colNumber)+"px";
+  triangle.style.visibility = "visible";
+
+  /* The timer */
+  var timer;
+  popup.addEventListener("mouseover", function(event) {
     popup.style.visibility = "visible";
-    triangle.style.marginTop = 97+61*Number(rowNumber)+"px";
     triangle.style.visibility = "visible";
+    clearTimeout(timer);
+  }, false);
 
-    /* The timer */
-    var timer;
-    popup.addEventListener("mouseover", function(event) {
-      popup.style.visibility = "visible";
-      triangle.style.visibility = "visible";
-      clearTimeout(timer);
-    }, false);
-
-    popup.addEventListener("mouseout", function(event) {
-      timer = setTimeout(function(){
-        popup.style.visibility = "hidden";
-        triangle.style.visibility = "hidden"; }, 5000);
-    }, false);
-  }
+  popup.addEventListener("mouseout", function(event) {
+    timer = setTimeout(function(){
+      popup.style.visibility = "hidden";
+      triangle.style.visibility = "hidden"; }, 5000);
+  }, false);
 }
 
   /*

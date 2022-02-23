@@ -16,7 +16,6 @@
 
 	<!-- The calculator section -->
 	<div class="calculator">
-
 		<table id="table">
 			<thead>
 				<tr>
@@ -31,28 +30,24 @@
 						<td><input type="text" class="col1" name"col1"
 									placeholder="Assignment"></td>
 						<td><input type="number" class="col2" name"col2" placeholder="0" min="0" max="100"></td>
+						<div id="popup"></div>
+						<div id = "popup-triangle"></div>
 						<td><input type="number" class="col3" name"col3" placeholder="0"
-									min="0" max="100" onchange="minCheck(this.value, this.min, this)"></td>
-									<div id="popup">This value must be greater than or equal
-										to this assignment's grade.</div>
-									<div id = "popup-triangle"></div>
+									min="0" max="100"></td>
 				</tr>
 
 				<tr>
 					<td><input type="text" class="col1" name"col1"></td>
 					<td><input type="number" class="col2" name"col2" min="0" max="100"></td>
-					<td><input type="number" class="col3" name"col3" min="0" max="100"
-								onchange="minCheck(this.value, this.min, this)"></td>
+					<td><input type="number" class="col3" name"col3" min="0" max="100"></td>
 				</tr>
 
 				<tr>
 					<td><input type="text" class="col1" name"col1"></td>
 					<td><input type="number" class="col2" name"col2" min="0" max="100"></td>
-					<td><input type="number" class="col3" name"col3" min="0" max="100"
-								onchange="minCheck(this.value, this.min, this)"></td>
+					<td><input type="number" class="col3" name"col3" min="0" max="100"></td>
 				</tr>
 			</tbody>
-
 		</table>
 
 		<div class="buttons-container">
