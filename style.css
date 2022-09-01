@@ -130,8 +130,7 @@ thead tr, tbody tr {
 }
 
 tbody tr td input:focus {
-  outline: none;
-  border-style: none;
+  outline-color: #d09c50;
 }
 
 td input {
