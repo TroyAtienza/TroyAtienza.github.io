@@ -50,7 +50,7 @@ function calculateGrade() {
   var grade, weight, total;
 
   //loops through rows and calculates user input from Grades and Weight column.
-  for (var i = 1; i < rows.length-1; i++) {
+  for (var i = 1; i < rows.length; i++) {
     grade = Number(rows[i].cells[1].children[0].value);
     weight = Number(rows[i].cells[2].children[0].value);
     total += weight;
@@ -104,7 +104,7 @@ function showPopup(message, row) {
    * header and footer
    */
 function deleteRow(tableID) {
-  document.getElementById(tableID).getElementsByTagName('tbody')[0].deleteRow(0);
+  document.getElementById(tableID).getElementsByTagName('tbody')[0].deleteRow(-1);
 }
 
 /**
