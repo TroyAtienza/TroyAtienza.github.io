@@ -78,16 +78,21 @@
 
 			<div class="functions-container">
 				<div class="functions-left">
+					<div class="functionText">Backspace</div>
 					<button class="button text" onmousedown="event.preventDefault();"
 						onclick="backspace();">DEL</button>
-					<button class="button text"
+					<div class="functionText">Add Row</div>
+					<button class="button text" id="plus"
 						onclick="addRow('table'); addKeyListeners()">+</button>
+					<div class="functionText">Delete Row</div>
 					<button class="button text" id="minus"
 						onclick="deleteRow('table');">-</button>
 				</div>
 				<div class="functions-right">
+					<div class="functionText">Clear All</div>
 					<button class="button text" onmousedown="event.preventDefault();"
 						onclick="clearAll();">AC</button>
+					<div class="functionText">Calculate Total</div>
 					<button class="button text" id="submit" onclick="calculateGrade();">=</button>
 				</div>
 

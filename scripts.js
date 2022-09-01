@@ -145,7 +145,7 @@ function appendNumber(value) {
  * Removes the last digit of a number.
  */
 function backspace() {
-  if (document.activeElement.value.length == 0 || document.activeElement.type == "text"){
+  if (document.activeElement.value.length == 0){
     return;
   }
   var result = document.activeElement.value.toString().slice(0,-1); //gets value without the last digit
